@@ -1,8 +1,8 @@
 import pandas as pd
 import numpy as np
 import streamlit as st
-#import matplotlib.pyplot as plt
-#import seaborn as sns
+import matplotlib.pyplot as plt
+import seaborn as sns
 
 # Nombre de la pestaña e icono
 st.set_page_config(layout='centered', page_title='Talento Tech', page_icon=':smile:')
@@ -62,7 +62,7 @@ with steps[3]:
     m2.metric(label='Metrica 2', value=np.mean(id2['Clics']), 
               delta =str(np.mean(id2['Impresiones'])) + ' promedios',
               delta_color='inverse')
-'''
+
 with steps[4]:
     st.write('Gráficos con Searnborn')
     id_camp = st.selectbox('Escoge ID campaña', met_df['ID_Campana'].unique())
@@ -85,4 +85,4 @@ with steps[5]:
     fig, ax = plt.subplots()
     ax = sns.histplot(data=df, x=varx, bins=20)
     st.pyplot(fig)
-'''
+
